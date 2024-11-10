@@ -16,6 +16,11 @@ return {
       -- Set a formatter
       -- null_ls.builtins.formatting.stylua,
       -- null_ls.builtins.formatting.prettier,
+      null_ls.builtins.formatting.prettier.with {
+        env = {
+          PRETTIER_DEFAULT_CONFIG = "~/build-tools/.prettierrc",
+        },
+      },
     }
     return config -- return final config table
   end,
